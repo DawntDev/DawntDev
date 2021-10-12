@@ -1,16 +1,13 @@
-### Hi there 👋
+<h3 align="center">👋 Hi there! I'm Juan Manuel</h3>
+<p>
+    <a href="https://discord.com/channels/@me/GeimerDroiid#0359">
+        <img align="center" alt="GeimerDroiid|Discord" width="22px" src="https://raw.githubusercontent.com/peterthehan/peterthehan/master/assets/discord.svg"
+    </a>
+</p>
 
-<!--
-**GeimerDroiid/GeimerDroiid** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+---
 
-Here are some ideas to get you started:
+✨ I'm a frontend engineer and technical writer passionate about making the web accessible to everyone and advocating for building open and inclusive developer communities. 
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+I love sharing my knowledge with others, and I do that through content creation on my Blog and YouTube channel. I'm a GitHub Star, Media Developer Expert at Cloudinary, an Auth0 Ambassador, and Nuxt.js Ambassador. When I'm not coding, you can find me geeking about photography and exploring different ways of documenting stories using photography.
+
