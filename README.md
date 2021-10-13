@@ -54,7 +54,7 @@ My passion for software is to visualize and bring to life the ideas that are for
 <img src="https://github-readme-stats.vercel.app/api?username=GeimerDroiid&show_icons=true&theme=tokyonight" align="right" raw=true alt="GeimerDroiid">
 
 - Visual Studio Code <img alt="Visual Studio Code" align="absmiddle" width="24px" src="https://raw.githubusercontent.com/GeimerDroiid/GeimerDroiid/main/assets/vscode.svg">
-- Android Studio
+- Android Studio <img alt="Android Studio" align="absmiddle" width="24px" src="https://raw.githubusercontent.com/GeimerDroiid/GeimerDroiid/main/assets/android-studio.svg">
 - Git <img alt="Git" align="absmiddle" width="24px" src="https://raw.githubusercontent.com/GeimerDroiid/GeimerDroiid/main/assets/git.svg">
 - Github <img alt="Github" align="absmiddle" width="24px" src="https://raw.githubusercontent.com/GeimerDroiid/GeimerDroiid/main/assets/github.svg">
 - HTML <img alt="HTML" align="absmiddle" width="24px" src="https://raw.githubusercontent.com/GeimerDroiid/GeimerDroiid/main/assets/html.svg">
