@@ -2,7 +2,7 @@
 <p align="center">
  <a href="https://discord.com/channels/@me/GeimerDroiid#0359">
      <img alt="GeimerDroiid | Discord" width="24px" HSPACE="5" src="https://raw.githubusercontent.com/GeimerDroiid/GeimerDroiid/main/assets/discord.svg"></a>
- <a href="https://discord.com/channels/@me/GeimerDroiid#0359">
+ <a href="#">
      <img alt="GeimerDroiid | Spotyfi" width="24px" HSPACE="5" src="https://raw.githubusercontent.com/GeimerDroiid/GeimerDroiid/main/assets/spotify.svg"></a>
  <a href="https://github.com/GeimerDroiid">
     <img alt="GeimerDroiid | Github" width="24px" HSPACE="5" src="https://raw.githubusercontent.com/GeimerDroiid/GeimerDroiid/main/assets/github.svg"></a>
