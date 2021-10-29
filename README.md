@@ -3,7 +3,7 @@
  <a href="https://discord.com/channels/@me/GeimerDroiid#0359">
      <img alt="GeimerDroiid | Discord" width="24px" HSPACE="5" src="https://raw.githubusercontent.com/GeimerDroiid/GeimerDroiid/main/assets/discord.svg"></a>
  <a href="https://open.spotify.com/playlist/6eDl0FX1pNcaFXgYIBOobX?si=aewrQ2nJTuSgkMSip3d8-Q&utm_source=copy-link">
-     <img alt="GeimerDroiid | Spotyfi" width="24px" HSPACE="5" src="https://raw.githubusercontent.com/GeimerDroiid/GeimerDroiid/main/assets/spotify.svg"></a>
+     <img alt="GeimerDroiid | Spotify" width="24px" HSPACE="5" src="https://raw.githubusercontent.com/GeimerDroiid/GeimerDroiid/main/assets/spotify.svg"></a>
  <a href="https://github.com/GeimerDroiid">
     <img alt="GeimerDroiid | Github" width="24px" HSPACE="5" src="https://raw.githubusercontent.com/GeimerDroiid/GeimerDroiid/main/assets/github.svg"></a>
  <a href="mailto:jmanuelhv9@gmail.com">
