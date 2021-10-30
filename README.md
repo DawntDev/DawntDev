@@ -24,12 +24,6 @@ My passion for software is to visualize and bring to life the ideas that are for
 - I like videogames and anime
 - I collect rubik's cubes
 
-**My objectives**
-- Continue learning about mobile development
-- Learn the principles of BackEnd
-- Create a videogame
-- Increase my knowledge in Python and JavaScript
-
 **Things I am currently working on**
 - Full Stack Web Development <img alt="HTML" align="absmiddle" width="24px" src="https://raw.githubusercontent.com/GeimerDroiid/GeimerDroiid/main/assets/html.svg"><img alt="CSS" align="absmiddle" width="24px" src="https://raw.githubusercontent.com/GeimerDroiid/GeimerDroiid/main/assets/css3.svg"><img alt="JavaScript" align="absmiddle" width="24px" src="https://raw.githubusercontent.com/GeimerDroiid/GeimerDroiid/main/assets/javascript.svg"><img alt="Python" align="absmiddle" width="24px" src="https://raw.githubusercontent.com/GeimerDroiid/GeimerDroiid/main/assets/python.svg"><img alt="MySql" align="absmiddle" width="24px" src="https://raw.githubusercontent.com/GeimerDroiid/GeimerDroiid/main/assets/mysql.svg">
 
