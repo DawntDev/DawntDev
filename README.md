@@ -18,7 +18,7 @@ I am currently studying at the Escuela Nacional Preparatoria and I hope soon to 
 
 My passion for software is to visualize and bring to life the ideas that are formulated inside my head, with elegant and minimalistic interfaces that are easy to use. I take great care in the experience, architecture and code quality of the things I build.
 
-> Si puedes imaginarlo, puedes programarlo
+> Si puedes imaginarlo puedes programarlo.
 
 **About Me**
 - I am from Mexico🇲🇽, more specifically from the CDMX.
