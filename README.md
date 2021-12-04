@@ -38,7 +38,7 @@ My passion for software is to visualize and bring to life the ideas that are for
 ███████████░░░░░░░░░░░░░░░░ 32.24 % 
 - Learn Node JS <img alt="NodeJS" align="absmiddle" width="38px" src="https://raw.githubusercontent.com/GeimerDroiid/GeimerDroiid/main/assets/nodejs.svg">
 
-░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0.00 % 
+████████████░░░░░░░░░░░░░░░ 38.30 % 
 - Learn React <img alt="NodeJS" align="absmiddle" width="24px" src="https://raw.githubusercontent.com/GeimerDroiid/GeimerDroiid/main/assets/react.svg">
  
 ████████░░░░░░░░░░░░░░░░░░░ 23.38 % 
