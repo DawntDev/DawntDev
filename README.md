@@ -57,6 +57,6 @@ My passion for software is to visualize and bring to life the ideas that are for
 - CSS <img alt="CSS" align="absmiddle" width="24px" src="https://raw.githubusercontent.com/GeimerDroiid/GeimerDroiid/main/assets/css3.svg">
 - JavaScript <img alt="JavaScript" align="absmiddle" width="24px" src="https://raw.githubusercontent.com/GeimerDroiid/GeimerDroiid/main/assets/javascript.svg">
 - Python <img alt="Python" align="absmiddle" width="24px" src="https://raw.githubusercontent.com/GeimerDroiid/GeimerDroiid/main/assets/python.svg">
-  <img src="https://github-readme-stats.vercel.app/api/wakatime?username=GeimerDroiid&layout=compact&theme=tokyonight" align="right" raw=true alt="GeimerDroiid">
+  <img src="https://github-readme-stats.vercel.app/api/wakatime?username=DawntDev&layout=compact&theme=tokyonight" align="right" raw=true alt="DawntDev">
 - Kotlin <img alt="Kotlin" align="absmiddle" width="24px" src="https://raw.githubusercontent.com/GeimerDroiid/GeimerDroiid/main/assets/kotlin.svg">
  
