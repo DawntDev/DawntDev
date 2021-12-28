@@ -41,7 +41,7 @@ My passion for software is to visualize and bring to life the ideas that are for
 ████████████░░░░░░░░░░░░░░░ 38.30 % 
 - Learn React <img alt="NodeJS" align="absmiddle" width="24px" src="https://raw.githubusercontent.com/GeimerDroiid/GeimerDroiid/main/assets/react.svg">
  
-████████░░░░░░░░░░░░░░░░░░░ 23.38 % 
+██████████████░░░░░░░░░░░░░ 46.38 % 
 
 ---
 
