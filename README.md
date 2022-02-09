@@ -57,9 +57,9 @@
 <!-- Details Section -->
 <!-- Activity Widget -->
 <div align="center">
-    <img alt="Dawnt GitHub Stats" width="35%"
+    <img alt="Dawnt GitHub Stats" width="40%"
         src="https://github-readme-stats.vercel.app/api?username=DawntDev&show_icons=true&theme=github_dark" />
-    <img alt="Dawnt GitHub Stats" width="41.4%"
+    <img alt="Dawnt GitHub Stats" width="47%"
         src="https://github-readme-stats.vercel.app/api/wakatime?username=Dawnt&layout=compact&theme=github_dark" />
 </div>
 <br>
