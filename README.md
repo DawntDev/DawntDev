@@ -116,7 +116,7 @@
     </a>
     <span>&nbsp;</span>
     <a href="https://github.com/DawntDev/DawntDev">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=DawntDev&repo=DawntDev&theme=github_dark" />
+        <img src="https://github-readme-stats.vercel.app/api/pin/?username=DawntDev&repo=&theme=github_dark" />
     </a>
 </p>
 </details>
