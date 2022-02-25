@@ -124,5 +124,5 @@
 
 <div align="center">
     <img alt="CodeWithDawnt" width="25%"
-        src="https://img.shields.io/badge/-Code%20with%20%E2%9D%A4-000000?style=for-the-badge" />
+        src="https://img.shields.io/badge/-Coded%20with%20%E2%9D%A4-000000?style=for-the-badge" />
 </div>
