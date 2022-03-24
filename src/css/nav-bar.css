@@ -1,0 +1,88 @@
+aside#NavBar {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 15%;
+    background: var(--background);
+    color : var(--text);
+    outline: 1px solid red;
+}
+
+aside#NavBar > header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 10%;
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    outline: 1px solid blue;
+}
+
+
+aside#NavBar > header > img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+
+aside#NavBar > header > h1 {
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+aside#NavBar > nav > ul > li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    outline: 1px solid red;
+}
+
+
+aside#NavBar > nav > ul > li > a {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.2rem;
+    padding: 1rem;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+aside#NavBar > nav > ul > li > a > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: .5rem;
+}
+
+aside#NavBar > nav > ul > li > a > div > svg > path {
+    stroke: var(--text);
+}
+
+@media (max-width: 1024px) {
+    aside#NavBar {
+        width: 20%;
+    }
+}
+
+@media (max-width: 912px) {
+    aside#NavBar > header {
+        justify-content: center;
+    }
+
+    aside#NavBar > header > h1 {
+        display: none;
+    }
+
+    aside#NavBar > nav > ul > li > a{
+        text-shadow: transparent;
+        color: transparent;
+        text-indent:-999px;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+    }
+}
