@@ -68,7 +68,7 @@
     <p align="center">
         <!-- Social Links -->
         <!-- Discord -->
-        <a href="#" target="_blank"><img alt="Discord"
+        <a href="https://discord.gg/mexicodev" target="_blank"><img alt="Discord"
                 src="https://img.shields.io/badge/-Discord-5865F2?style=flat-square&logo=Discord&logoColor=white">
         </a>
         <!-- Spotify -->
