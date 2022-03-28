@@ -32,23 +32,23 @@
                     src="https://img.shields.io/badge/-CSS-1572B6?style=flat-square&logo=CSS3&logoColor=white">
     </a>
     <!-- JavaScript -->
-    <a href="https://github.com/DawntDev?tab=repositories" target="_blank"><img alt="JavaScript"
+    <a href="https://github.com/DawntDev?tab=repositories&q=&type=&language=javascript&sort=" target="_blank"><img alt="JavaScript"
                     src="https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=white">
     <!-- TypeScript -->
-    <a href="https://github.com/DawntDev?tab=repositories" target="_blank"><img alt="TypeScript"
+    <a href="https://github.com/DawntDev?tab=repositories&q=&type=&language=typescript&sort=" target="_blank"><img alt="TypeScript"
                     src="https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=TypeScript&logoColor=white">
     </a>
     <br>
     <!-- Python -->
-    <a href="https://github.com/DawntDev?tab=repositories" target="_blank"><img alt="Python"
+    <a href="https://github.com/DawntDev?tab=repositories&q=&type=&language=python&sort=" target="_blank"><img alt="Python"
                     src="https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=Python&logoColor=white">
     </a>
     <!-- C# -->
-    <a href="https://github.com/DawntDev?tab=repositories" target="_blank"><img alt="C#"
+    <a href="https://github.com/DawntDev?tab=repositories&q=&type=&language=c%23&sort=" target="_blank"><img alt="C#"
                     src="https://img.shields.io/badge/-C%23-9b3675?style=flat-square&logo=csharp&logoColor=white">
     </a>
     <!-- Kotlin -->
-    <a href="https://github.com/DawntDev?tab=repositories" target="_blank"><img alt="Kotlin"
+    <a href="https://github.com/DawntDev?tab=repositories&q=&type=&language=kotlin&sort=" target="_blank"><img alt="Kotlin"
                     src="https://img.shields.io/badge/-Kotlin-7F52FF?style=flat-square&logo=Kotlin&logoColor=white">
     </a>
 </p>
