@@ -1,16 +1,20 @@
-export interface ITheme {  
-    background: string;
-    text: string;
-    textShadow: string;
-    border: string;
+type states = {
+    [key: string]: {
+        value?: any;
+        setter: React.Dispatch<React.SetStateAction<any>>;
+    };
 };
 
 export interface IRouteProps {
-    theme: ITheme;
-    width: number;
+    path: string;
+    menu: {
+        value: boolean;
+        setter: React.Dispatch<React.SetStateAction<boolean>>;
+    }
+    
 }
 
 export interface IComponentProps {
-    theme: ITheme;
+    active?: string;
+    states?: states;
 };
-

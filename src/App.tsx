@@ -1,67 +1,40 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { ITheme } from './context/interfaces';
-import { Home, Projects, Blog, Contact } from './routes';
-
-const themes: {light:ITheme, dark:ITheme} = {
-    light: {
-        background: "#fff",
-        text: "#000",
-        textShadow: "0 0 0 #fff",
-        border: "1px solid #000"
-    },
-    dark: {
-        background: "#000",
-        text: "#fff",
-        textShadow: "0 0 0 #000",
-        border: "1px solid #fff"
-    }
-}
+import { Home, Projects, Blog, Contact, About } from './routes';
 
 function App() {
-    const [time, setTime] = useState<number>(new Date().getHours());
-    const [theme, setTheme] = useState<ITheme>(themes[time < 18 ? "light" : "dark"]);
-    const [width, setWidth] = useState<number>(window.innerWidth);
-
-    useEffect(() => { 
-        const interval: number = window.setInterval(() => { 
-            setTime(new Date().getHours());
-        }, 3_600_000);
-
-        const onResize = (e: Event) => {
-            const width: number = (e.target as Window).innerWidth;
-            setWidth(width);
-        };
-        window.addEventListener("resize", onResize);
-
-        return () => { 
-            clearInterval(interval);
-            window.removeEventListener("resize", onResize);
-        };
-    }, []);
-
+    const [width, setWidth] = useState(window.innerWidth);
+    const [showMenu, setShowMenu] = useState<boolean>(false);
+    const location: string = window.location.pathname;
+    
     useEffect(() => {
-        setTheme(themes[time < 18 ? "light" : "dark"]);
-    }, [time]);
+        const handleResize = (): void => setWidth(window.innerWidth);
+        window.addEventListener("resize", handleResize);
+        return (): void => window.removeEventListener("resize", handleResize);
+    }, [])
 
-    useEffect(() => {
-        const html: HTMLHtmlElement | null = document.querySelector("html");
-        for (const [key, value] of Object.entries(theme)) {
-            const variable: string = `--${key}`;
-            if (html && value) {
-                html.style.setProperty(variable, value);
+    useEffect((): void => {
+        if (width < 849) {
+            if (showMenu) {
+                document.querySelector("div#Title > svg")?.classList.add("show");
+                document.getElementById("NavBar")!.style.display = "flex";
+            } else {
+                document.querySelector("div#Title > svg")?.classList.remove("show");
+                document.getElementById("NavBar")!.style.display = "none";
             };
+        } else {
+            document.getElementById("NavBar")!.style.display = "flex";
         };
-
-    }, [theme]);
+    }, [showMenu, width]);
 
     return (
         <Router>
             <Routes>
-                <Route path="/" element={<Home theme={theme} width={width} />} />
-                <Route path="/projects" element={<Projects theme={theme} width={width}  />} />
-                <Route path="/blog" element={<Blog theme={theme} width={width}  />} />
-                <Route path="/contact" element={<Contact theme={theme} width={width}  />} />
+                <Route path="/" element={<Home path={location} menu={{value: showMenu, setter: setShowMenu}} />} />
+                <Route path="/projects" element={<Projects path={location} menu={{value: showMenu, setter: setShowMenu}} />} />
+                <Route path="/blog" element={<Blog path={location} menu={{value: showMenu, setter: setShowMenu}} />} />
+                <Route path="/contact" element={<Contact path={location} menu={{value: showMenu, setter: setShowMenu}} />} />
+                <Route path="/about" element={<About path={location} menu={{value: showMenu, setter: setShowMenu}} />} />
             </Routes>
         </Router>
     );

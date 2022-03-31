@@ -1,88 +1,203 @@
 aside#NavBar {
+    position: fixed;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
     height: 100%;
-    width: 15%;
-    background: var(--background);
-    color : var(--text);
-    outline: 1px solid red;
+    width: 16.25rem;
+    background: radial-gradient(circle, #242424 0%, #1d1f27 100%);
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease-in-out;
+    z-index: 100;
 }
 
 aside#NavBar > header {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    height: 10%;
-    font-family: 'Nunito', sans-serif;
-    margin-bottom: 1.5rem;
-    padding: 1rem;
-    outline: 1px solid blue;
+    width: 100%;
+    margin-top: 3rem;
 }
 
-
-aside#NavBar > header > img {
-    width: 5rem;
-    height: 5rem;
+aside#NavBar > header > a > img {
+    width: 6rem;
     border-radius: 50%;
+    transition: width 0.3s ease-in-out;
 }
 
-aside#NavBar > header > h1 {
-    margin-left: 1rem;
+aside#NavBar > header > a > img:hover {
+    cursor: pointer;
+    width: 6.5rem;
+}
+
+
+aside#NavBar > header > a > h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 900;
     font-size: 1.5rem;
-    font-weight: bold;
-    transition: all 0.3s ease-in-out;
+    letter-spacing: .5px;
+    color: #868585;
+    margin-top: 1rem;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
 }
 
-aside#NavBar > nav > ul > li {
+aside#NavBar > header > a > h1:hover {
+    cursor: pointer;
+    color: #fff;
+}
+
+aside#NavBar > header > p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    font-style: italic;
+    line-height: 1.2rem;
+    letter-spacing: 0.5px;
+    word-spacing: 1px;
+    color: #6d6c6b;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin: .5rem 1.5rem;
+}
+
+aside#NavBar > nav {
+    position: relative;
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     align-items: center;
-    outline: 1px solid red;
+    text-align: center;
+    width: 100%;
+    height: 15rem;
+    margin-top: 1rem;
 }
 
+aside#NavBar > nav > ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
 
+aside#NavBar > nav > ul > li,
 aside#NavBar > nav > ul > li > a {
     display: flex;
-    flex-direction: row;
-    font-family: 'Nunito', sans-serif;
-    font-size: 1.2rem;
-    padding: 1rem;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
-    transition: all 0.3s ease-in-out;
+    height: 3rem;
 }
 
-aside#NavBar > nav > ul > li > a > div {
+aside#NavBar > nav > ul >li > a {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #868585;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+aside#NavBar > nav > ul > li > a:hover {
+    cursor: pointer;
+    color: #fff;
+}
+aside#NavBar > nav > ul > li.active > a {
+    cursor: pointer;
+    color: #fff;
+    transition: none;
+}
+
+aside#NavBar > nav > div#index {
+    position: absolute;
+    width: .25rem;
+    height: 100%;
+    z-index: 200;
+}
+
+aside#NavBar > nav > div#index > div {
+    position: absolute;
+    width: 100%;
+    height: 2rem;
+    border-radius: 5px;
+    background: #fff;
+    margin: .5rem 0;
+    transition: top 0.3s ease-in-out;
+}
+
+aside#NavBar > footer {
     display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 2rem;
+}
+
+aside#NavBar > footer > div {
+    display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-right: .5rem;
+    width: 100%;
+    margin-bottom: 2rem;
 }
 
-aside#NavBar > nav > ul > li > a > div > svg > path {
-    stroke: var(--text);
+aside#NavBar > footer > div > a,
+aside#NavBar > footer > div > a > svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: #868585;
+    transition: fill 0.3s ease-in-out;
+    margin: 0 .5rem;
 }
 
-@media (max-width: 1024px) {
+aside#NavBar > footer > div > a[aria-label="CodeWars"] > svg:hover {
+    cursor: pointer;
+    fill: #b8341c;
+}
+
+aside#NavBar > footer > div > a[aria-label="Spotify"] > svg:hover {
+    cursor: pointer;
+    fill: #1db954;
+}
+
+aside#NavBar > footer > div > a[aria-label="Discord"] > svg:hover {
+    cursor: pointer;
+    fill: #5865F2;
+}
+
+aside#NavBar > footer > div > a[aria-label="LinkedIn"] > svg:hover {
+    cursor: pointer;
+    fill: #0077B5;
+}
+
+aside#NavBar > footer > p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 0.75rem;
+    font-style: italic;
+    line-height: 1.2rem;
+    letter-spacing: 0.5px;
+    word-spacing: 1px;
+    color: #6d6c6b;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin: .5rem 1.5rem;
+}
+
+@media (min-width: 850px) and (max-width: 1199px) {
     aside#NavBar {
-        width: 20%;
+        width: 13.125rem;
     }
 }
 
-@media (max-width: 912px) {
-    aside#NavBar > header {
-        justify-content: center;
-    }
-
-    aside#NavBar > header > h1 {
+@media (min-width: 0px) and (max-width: 849px) {
+    aside#NavBar {
         display: none;
-    }
-
-    aside#NavBar > nav > ul > li > a{
-        text-shadow: transparent;
-        color: transparent;
-        text-indent:-999px;
-        align-items: center;
-        justify-content: center;
-        font-size: 2rem;
     }
 }

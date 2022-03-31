@@ -1,0 +1,61 @@
+div#Title {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    width: calc(100% - 16.25rem);
+    height: 4.5rem;
+}
+
+div#Title > svg {
+    display: none;
+    position: absolute;
+    width: 2.5rem;
+    height: 2.5rem;
+    left: 0;
+    fill: #868585;
+    margin: 0 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+div#Title>svg:hover {
+    fill: #fff;
+}
+
+div#Title > h3 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+@media (min-width: 850px) and (max-width: 1199px) {
+    div#Title {
+        width: calc(100% - 13.125rem);
+    }
+}
+
+@media (min-width: 0px) and (max-width: 849px) {
+    div#Title {
+        width: 100%;
+    }
+
+    div#Title > svg {
+        display: block;
+    }
+
+    div#Title > svg.show {
+        position: fixed;
+        fill: #fff;
+        transform: rotate(90deg);
+        z-index: 300;
+    }
+
+    
+}
