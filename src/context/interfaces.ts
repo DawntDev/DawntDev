@@ -7,14 +7,19 @@ type states = {
 
 export interface IRouteProps {
     path: string;
-    menu: {
-        value: boolean;
-        setter: React.Dispatch<React.SetStateAction<boolean>>;
-    }
-    
 }
 
 export interface IComponentProps {
     active?: string;
     states?: states;
+};
+
+export interface IRepo { 
+    name: string;
+    description: string;
+    url: string;
+    img: string;
+    stars: number;
+    forks: number;
+    languages: string;
 };

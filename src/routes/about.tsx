@@ -1,16 +1,25 @@
 import React, { useEffect, useState } from "react";
+import Particles from "react-tsparticles";
 import NavBar from "../components/nav-bar";
-import Title from "../components/title";
 import { IRouteProps } from "../context/interfaces";
+import { particlesConnected } from "../context/particles";
 import "../css/about.css";
 
-export default function About(props: IRouteProps) { 
-    const { value, setter } = props.menu;
-
+export default function About(props: IRouteProps) {
     return (
-        <div id="About">
+        <>
             <NavBar active={props.path} />
-            <Title active={props.path} states={{ "showMenu": { value: value, setter: setter } }} />
-        </div>
+            <div id="About" className="route">
+                <div className="header">
+                    <Particles id="Particles" options={particlesConnected}/>
+                    <h1>About</h1>
+                    <div className="info">
+                        <p>Hi! my name is</p>
+                        <h3>Juan Manuel</h3>
+                        <p>I'm a software developer from Mexico.</p>
+                    </div>
+                </div>
+            </div>
+        </>
     );
 };

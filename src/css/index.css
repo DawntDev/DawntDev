@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
 
 * {
     margin: 0;
@@ -17,4 +17,29 @@ a {
 html, body, #root {
     width: 100%;
     height: 100%;
+    background: #1B1B1E;
+}
+
+div.route {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    right: 0;
+    width: calc(100% - 16.25rem);
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+
+@media (min-width: 850px) and (max-width: 1199px) {
+    div.route {
+        width: calc(100% - 13.125rem);
+    }
+}
+
+@media (min-width: 0px) and (max-width: 849px) {
+    div.route {
+        width: 100%;
+    }
 }

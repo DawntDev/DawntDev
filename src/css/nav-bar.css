@@ -7,7 +7,7 @@ aside#NavBar {
     height: 100%;
     width: 16.25rem;
     background: radial-gradient(circle, #242424 0%, #1d1f27 100%);
-    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.55);
     transition: all 0.3s ease-in-out;
     z-index: 100;
 }
@@ -18,6 +18,10 @@ aside#NavBar > header {
     align-items: center;
     width: 100%;
     margin-top: 3rem;
+}
+
+aside#NavBar > header > div#Button {
+    display: none;
 }
 
 aside#NavBar > header > a > img {
@@ -147,13 +151,17 @@ aside#NavBar > footer > div {
     margin-bottom: 2rem;
 }
 
-aside#NavBar > footer > div > a,
+aside#NavBar > footer > div > a {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0 .5rem;
+}
+
 aside#NavBar > footer > div > a > svg {
     width: 1.5rem;
     height: 1.5rem;
     fill: #868585;
     transition: fill 0.3s ease-in-out;
-    margin: 0 .5rem;
 }
 
 aside#NavBar > footer > div > a[aria-label="CodeWars"] > svg:hover {
@@ -197,7 +205,61 @@ aside#NavBar > footer > p {
 }
 
 @media (min-width: 0px) and (max-width: 849px) {
+    svg#Menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin: 1rem 0 0 1rem;
+        width: 2rem;
+        height: 2rem;
+        z-index: 200;
+        color: #868585;
+        transition: all 0.3s ease-in-out;
+    }
+
+    svg#Menu:hover {
+        cursor: pointer;
+        color: #fff;
+    }
+
+
     aside#NavBar {
+        width: 0;
+        text-indent: -9999px;
+    }
+
+    aside#NavBar > header {
+        margin-top: 0;
+    }
+
+    aside#NavBar > header > div#Button {
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        width: 100%;
+        height: 3rem;
+        transition: all 0.3s ease-in-out;
+        
+    }
+    
+    aside#NavBar > header > div#Button > svg {
+        width: 2rem;
+        height: 2rem;
+        color: #868585;
+        margin: 1rem 0 0 1rem;
+        transition: all 0.3s ease-in-out;
+    }
+
+    aside#NavBar>header>div#Button > svg:hover {
+        cursor: pointer;
+        color: #fff;
+    }
+    
+    aside#NavBar > header > p {
         display: none;
+    }
+
+    aside#NavBar > header > p.show {
+        display: block;
     }
 }

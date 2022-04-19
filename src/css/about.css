@@ -1,5 +1,53 @@
-div#About {
+svg#Menu.about:hover {
+    color: #000;
+}
+
+div#About > div.header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 22rem;
+    background: #f0f0f0
+}
+
+div#About > div.header > div#Particles {
+    position: absolute;
     width: 100%;
     height: 100%;
-    background: #27282B;
+    z-index: 1;
+}
+
+div#About > div.header > h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #000;
+    margin: 1.5rem 0;
+    z-index: 5;
+}
+
+div#About > div.header >div.info {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 100%;
+    z-index: 5;
+}
+
+div#About > div.header >div.info > p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #000;
+    margin: 1.5rem 0;
+}
+
+div#About > div.header >div.info > h3 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #0864fc;
 }
