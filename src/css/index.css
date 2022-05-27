@@ -9,9 +9,19 @@
     box-sizing: border-box;
 }
 
-a {
-    text-decoration: none;
-    color: var(--link);
+*::-webkit-scrollbar {
+    width: .5rem;
+    height: 100%;
+    border-radius: 5px;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 5px;
 }
 
 html, body, #root {
@@ -22,12 +32,14 @@ html, body, #root {
 
 div.route {
     position: absolute;
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
     right: 0;
     width: calc(100% - 16.25rem);
     height: 100%;
+    padding: .75rem;
     transition: all 0.3s ease-in-out;
 }
 
@@ -41,5 +53,6 @@ div.route {
 @media (min-width: 0px) and (max-width: 849px) {
     div.route {
         width: 100%;
+        padding-top: 3.5rem;
     }
 }

@@ -109,7 +109,8 @@ aside#NavBar > nav > ul > li > a:hover {
     cursor: pointer;
     color: #fff;
 }
-aside#NavBar > nav > ul > li.active > a {
+
+aside#NavBar > nav > ul > li > a.active {
     cursor: pointer;
     color: #fff;
     transition: none;
@@ -169,17 +170,20 @@ aside#NavBar > footer > div > a[aria-label="CodeWars"] > svg:hover {
     fill: #b8341c;
 }
 
-aside#NavBar > footer > div > a[aria-label="Spotify"] > svg:hover {
+aside#NavBar > footer > div > a[aria-label="Spotify"] > svg:hover,
+aside#NavBar > footer > div > a[aria-label="Spotify (en inglés)"] > svg:hover {
     cursor: pointer;
     fill: #1db954;
 }
 
-aside#NavBar > footer > div > a[aria-label="Discord"] > svg:hover {
+aside#NavBar > footer > div > a[aria-label="Discord"] > svg:hover,
+aside#NavBar > footer > div > a[aria-label="Discordia"] > svg:hover {
     cursor: pointer;
     fill: #5865F2;
 }
 
-aside#NavBar > footer > div > a[aria-label="LinkedIn"] > svg:hover {
+aside#NavBar > footer > div > a[aria-label="LinkedIn"] > svg:hover,
+aside#NavBar > footer > div > a[aria-label="LinkedIn (en inglés)"] > svg:hover {
     cursor: pointer;
     fill: #0077B5;
 }
@@ -207,8 +211,6 @@ aside#NavBar > footer > p {
 @media (min-width: 0px) and (max-width: 849px) {
     svg#Menu {
         position: fixed;
-        top: 0;
-        left: 0;
         margin: 1rem 0 0 1rem;
         width: 2rem;
         height: 2rem;
@@ -261,5 +263,6 @@ aside#NavBar > footer > p {
 
     aside#NavBar > header > p.show {
         display: block;
+        z-index: 100;
     }
 }

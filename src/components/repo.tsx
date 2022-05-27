@@ -4,8 +4,8 @@ import "../css/repo.css"
 
 export default function Repo(props: IRepo) { 
     return (
-        <div id="repo">
-            <div className="img"></div>
+        <div className="repo">
+            <img src={props.img} alt="banner" />
             <div className="info">
                 <h3>{props.name}</h3>
                 <p>{props.description}</p>

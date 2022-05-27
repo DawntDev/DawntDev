@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import gql from 'graphql-tag';
 import { useQuery } from '@apollo/react-hooks';
-import NavBar from "../components/nav-bar";
 import Repo from "../components/repo";
-import { IRouteProps } from "../context/interfaces";
 import "../css/projects.css";
 
 const repoQuery = gql`
@@ -28,11 +26,11 @@ const repoQuery = gql`
     }
 `;
 
-export default function Projects(props: IRouteProps) {
+export default function Projects() {
     const [repos, setRepos] = useState<Array<object>>([]);
     const { loading, error, data } = useQuery<any>(repoQuery);
-    
-    useEffect(() => { 
+
+    useEffect(() => {
         if (!loading && !error) {
             for (const repo of data.user.repositories.nodes) {
                 setRepos(repos => [...repos, {
@@ -42,34 +40,31 @@ export default function Projects(props: IRouteProps) {
                     openGraphImageUrl: repo.openGraphImageUrl,
                     forkCount: repo.forkCount,
                     stargazerCount: repo.stargazerCount,
-                    languages: [...repo.languages.nodes.map((language:{name:string}) => language.name)]
+                    languages: [...repo.languages.nodes.map((language: { name: string }) => language.name)]
                 }]);
             };
         };
     }, [loading, error, data]);
-    
+
     return (
-        <>
-            <NavBar active={props.path} />
-            <div id="Projects" className="route">
-                <div className="projects-container">
-                    {
-                        repos.map(
-                            (repo: any, index: number) => (
-                                <Repo key={index}
-                                    name={repo.name}
-                                    description={repo.description}
-                                    url={repo.url}
-                                    img={repo.openGraphImageUrl}
-                                    stars={repo.stargazerCount}
-                                    forks={repo.forkCount}
-                                    languages={repo.languages}
-                                />
-                            )
+        <div id="Projects" className="route">
+            <div className="projects-container">
+                {
+                    repos.map(
+                        (repo: any, index: number) => (
+                            <Repo key={index}
+                                name={repo.name}
+                                description={repo.description}
+                                url={repo.url}
+                                img={repo.openGraphImageUrl}
+                                stars={repo.stargazerCount}
+                                forks={repo.forkCount}
+                                languages={repo.languages}
+                            />
                         )
-                    }
-                </div>
+                    )
+                }
             </div>
-        </>
+        </div>
     );
 };

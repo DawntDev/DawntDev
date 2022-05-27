@@ -5,9 +5,11 @@ type states = {
     };
 };
 
-export interface IRouteProps {
+export interface IRoot { 
     path: string;
-}
+    element: () => JSX.Element;
+};
+
 
 export interface IComponentProps {
     active?: string;

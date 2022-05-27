@@ -1,18 +1,19 @@
 import React, { useEffect, useState } from "react";
+import { NavLink, useLocation } from "react-router-dom";
 import { SiCodewars, SiSpotify, SiDiscord, SiLinkedin } from "react-icons/si";
 import { CgMenuGridR, CgMenuGridO } from "react-icons/cg";
-import { IComponentProps } from "../context/interfaces";
 import "../css/nav-bar.css";
 
 
-export default function NavBar({ active }: IComponentProps) {
+export default function NavBar() {
+    const active = useLocation().pathname;
     const [width, setWidth] = useState<number>(window.innerWidth);
     const [showMenu, setShowMenu] = useState<boolean>(false);
     const pos = (elements: NodeListOf<Element>): number => {
         let y: number = 0;
 
         elements.forEach((e: Element, i: number) => {
-            if (e.classList.contains("active")) {
+            if (e.children[0].classList.contains("active")) {
                 y = 100 / elements.length * i;
             };
         });
@@ -44,7 +45,6 @@ export default function NavBar({ active }: IComponentProps) {
     }, [showMenu, width]);
 
     useEffect(() => {
-        document.querySelector(`a[href="${active}"]`)?.parentElement?.classList.add("active");
         document.title = active === "/" ? "Dawnt" : active ? `Dawnt | ${active[1].toUpperCase()}${active.replace("/", "").slice(1)}` : "Dawnt";
 
         const index: HTMLHtmlElement | null = document.querySelector("#index > div");
@@ -78,11 +78,11 @@ export default function NavBar({ active }: IComponentProps) {
                 </header>
                 <nav>
                     <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/projects">Projects</a></li>
-                        <li><a href="/blog">Blog</a></li>
-                        <li><a href="/contact">Contact</a></li>
-                        <li><a href="/about">About</a></li>
+                        <li><NavLink to="/">Home</NavLink></li>
+                        <li><NavLink to="/projects">Projects</NavLink></li>
+                        <li><NavLink to="/blog">Blog</NavLink></li>
+                        <li><NavLink to="/contact">Contact</NavLink></li>
+                        <li><NavLink to="/about">About</NavLink></li>
                     </ul>
                     <div id="index">
                         <div></div>
