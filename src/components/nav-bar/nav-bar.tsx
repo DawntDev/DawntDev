@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { SiCodewars, SiSpotify, SiDiscord, SiLinkedin } from "react-icons/si";
 import { CgMenuGridR, CgMenuGridO } from "react-icons/cg";
-import "../css/nav-bar.css";
+import "./nav-bar.css";
 
 
 export default function NavBar() {

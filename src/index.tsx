@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { ApolloProvider, ApolloClient, InMemoryCache, HttpLink } from '@apollo/client'
-import './css/index.css';
+import './index.css';
 import App from './App';
 
 const TOKEN: string | undefined = process.env.REACT_APP_GITHUB_TOKEN;

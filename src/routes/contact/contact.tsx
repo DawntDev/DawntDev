@@ -3,7 +3,7 @@ import { MdLocationOn, MdSchool } from "react-icons/md";
 import { FiCodepen } from "react-icons/fi";
 import { BsGithub } from "react-icons/bs";
 import { IoMdMail } from "react-icons/io";
-import "../css/contact.css";
+import "./contact.css";
 
 export default function Contact() {
     return (

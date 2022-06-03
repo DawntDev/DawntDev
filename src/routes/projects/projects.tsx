@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import gql from 'graphql-tag';
 import { useQuery } from '@apollo/react-hooks';
-import Repo from "../components/repo";
-import "../css/projects.css";
+import Repo from "../../components/repository/repository";
+import "./projects.css";
 
 const repoQuery = gql`
     query {

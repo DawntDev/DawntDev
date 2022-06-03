@@ -1,10 +1,10 @@
 import { IRoot } from "../context/interfaces";
-import Home from "./home";
-import Projects from "./projects";
-import Blog from "./blog";
-import Contact from "./contact";
-import About from "./about";
-import NotFound from "./notFound";
+import Home from "./home/home";
+import Projects from "./projects/projects";
+import Blog from "./blog/blog";
+import Contact from "./contact/contact";
+import About from "./about/about";
+import NotFound from "./not-found/not-found";
 
 const Root: Array<IRoot> = [
     {
