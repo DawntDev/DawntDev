@@ -43,10 +43,10 @@ export default function Contact() {
                     </ul>
                     <hr />
                     <ul>
-                        <li><a href=""><BsGithub /></a></li>
+                        {/* <li><a href=""><BsGithub /></a></li>
                         <li><a href=""><FiCodepen /></a></li>
                         <li><a href=""></a></li>
-                        <li><a href=""></a></li>
+                        <li><a href=""></a></li> */}
                     </ul>
                     <hr />
                 </div>

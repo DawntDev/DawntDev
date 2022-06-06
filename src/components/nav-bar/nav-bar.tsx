@@ -2,13 +2,14 @@ import React, { useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { SiCodewars, SiSpotify, SiDiscord, SiLinkedin } from "react-icons/si";
 import { CgMenuGridR, CgMenuGridO } from "react-icons/cg";
+import Root from "../../routes";
 import "./nav-bar.css";
 
 
 export default function NavBar() {
-    const active = useLocation().pathname;
     const [width, setWidth] = useState<number>(window.innerWidth);
     const [showMenu, setShowMenu] = useState<boolean>(false);
+    const active: string = useLocation().pathname;
     const pos = (elements: NodeListOf<Element>): number => {
         let y: number = 0;
 
@@ -45,12 +46,12 @@ export default function NavBar() {
     }, [showMenu, width]);
 
     useEffect(() => {
-        document.title = active === "/" ? "Dawnt" : active ? `Dawnt | ${active[1].toUpperCase()}${active.replace("/", "").slice(1)}` : "Dawnt";
-
         const index: HTMLHtmlElement | null = document.querySelector("#index > div");
+        let title: string = active === "/" ? "Dawnt" : active ? `Dawnt | ${active[1].toUpperCase()}${active.replace("/", "").slice(1)}` : "Dawnt";
         let elements: NodeListOf<Element> | null = document.querySelectorAll("nav > ul > li");
         let y: number = pos(elements);
 
+        document.title = Root.map(rule => rule.path).includes(active) ? title : "Not Found";
         index!.style.top = `${y}%`;
 
         for (let i = 0; i < elements.length; i++) {

@@ -6,7 +6,7 @@ aside#NavBar {
     text-align: center;
     height: 100%;
     width: 16.25rem;
-    background: radial-gradient(circle, #242424 0%, #1d1f27 100%);
+    background: radial-gradient(circle, #1b1919 0%, #16171b 100%);
     box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.55);
     transition: all 0.3s ease-in-out;
     z-index: 100;

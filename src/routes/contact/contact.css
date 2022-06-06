@@ -24,7 +24,7 @@ div#Contact > div.container {
 }
 
 /* From uiverse.io by @adamgiebl */
-button {
+/* button {
     font-family: inherit;
     font-size: 20px;
     background: royalblue;
@@ -75,4 +75,4 @@ button:active {
     to {
         transform: translateY(-0.1em);
     }
-}
+} */
