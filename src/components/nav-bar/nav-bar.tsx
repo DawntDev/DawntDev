@@ -73,7 +73,7 @@ export default function NavBar() {
                     <div id="Button">
                         <CgMenuGridO onClick={(): void => setShowMenu(!showMenu)} />
                     </div>
-                    <a href="https://github.com/DawntDev" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><img src="./assets/img/avatar.gif" alt="avatar" width="6rem" /></a>
+                    <a href="https://github.com/DawntDev" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><img src={`${process.env.PUBLIC_URL}/assets/img/avatar.gif`} alt="avatar" width="6rem" /></a>
                     <a href="https://github.com/DawntDev" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><h1>Dawnt</h1></a>
                     <p>Mexico<br /> Software Developer</p>
                 </header>
