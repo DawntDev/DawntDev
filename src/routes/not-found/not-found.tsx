@@ -9,9 +9,13 @@ export default function NotFound() {
         <div id="NotFound" className="route">
             <div className="led">
                 <div className="panel">
-                    <h5>404 Error</h5>
-                    <p>The page you are looking for, <span>{location}</span>, does not exist.</p>
-                    <NavLink to="/">Go to Home</NavLink>
+                    <div className="body">
+                        <h5>404 Error</h5>
+                        <p>The page you are looking for, <span>{location}</span>, does not exist.</p>
+                    </div>
+                    <div className="footer">
+                        <NavLink to="/">Go to Home</NavLink>
+                    </div>
                 </div>
             </div>
         </div>

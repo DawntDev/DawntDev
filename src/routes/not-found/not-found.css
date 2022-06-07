@@ -18,6 +18,7 @@ div#NotFound > div.led:hover {
 div#NotFound > div.led > div.panel {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     width: 25rem;
     height: 32rem;
     padding: 2rem;
@@ -31,8 +32,7 @@ div#NotFound > div.led > div.panel:hover {
     border-radius: 20px;
 }
 
-
-div#NotFound > div.led > div.panel > h5 {
+div#NotFound > div.led > div.panel > div.body > h5 {
     color: #0b6dc8;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 1.5rem;
@@ -41,18 +41,17 @@ div#NotFound > div.led > div.panel > h5 {
     text-align: left;
 }
 
-div#NotFound > div.led > div.panel > p {
+div#NotFound > div.led > div.panel > div.body > p {
     color: #fff;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 3rem;
     font-weight: 700;
     text-align: left;
-    margin-bottom: 3rem;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-div#NotFound > div.led > div.panel > p span {
+div#NotFound > div.led > div.panel > div.body > p span {
     color: #0b6dc8;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 3rem;
@@ -62,9 +61,19 @@ div#NotFound > div.led > div.panel > p span {
     text-transform: lowercase;
 }
 
-div#NotFound > div.led > div.panel > a {
+div#NotFound > div.led > div.panel > div.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 5rem;
+}
+
+div#NotFound > div.led > div.panel > div.footer > a {
     color: #fff;
     font-family: 'Source Sans Pro', sans-serif;
+    width: 100%;
     font-size: 1.5rem;
     font-weight: 600;
     text-align: center;
@@ -75,7 +84,7 @@ div#NotFound > div.led > div.panel > a {
     transition: all .2s;
 }
 
-div#NotFound > div.led > div.panel > a:hover {
+div#NotFound > div.led > div.panel > div.footer > a:hover {
     box-shadow: 0px 0px 30px 1px #1a1a1a;
     transform: scale(0.98);
     border-radius: 20px;
@@ -92,15 +101,8 @@ div#NotFound > div.led > div.panel > a:hover {
         height: 100%;
     }
 
-    div#NotFound > div.led > div.panel > h5 {
+    div#NotFound > div.led > div.panel > div.footer > a {
         font-size: 1.5rem;
-    }
-
-    div#NotFound > div.led > div.panel > p {
-        font-size: 2.5rem;
-    }
-
-    div#NotFound > div.led > div.panel > a {
-        font-size: 1.5rem;
+        margin-bottom: 1rem;
     }
 }
