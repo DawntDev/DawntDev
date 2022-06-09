@@ -4,35 +4,7 @@ div#NotFound {
     align-items: center;
 }
 
-div#NotFound > div.led {
-    width: 25rem;
-    height: 32rem;
-    background-image: linear-gradient(163deg, #f72585 0%, #0d41e1 100%);
-    border-radius: 22px;
-    transition: all .3s;
-}
-
-div#NotFound > div.led:hover {
-    box-shadow: 0px 0px 30px 1px rgba(149, 0, 255, 0.3);
-}
-div#NotFound > div.led > div.panel {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 25rem;
-    height: 32rem;
-    padding: 2rem;
-    background-color: #1a1a1a;
-    border-radius:20px;
-    transition: all .2s;
-}
-
-div#NotFound > div.led > div.panel:hover {
-    transform: scale(0.98);
-    border-radius: 20px;
-}
-
-div#NotFound > div.led > div.panel > div.body > h5 {
+div#NotFound  div.body > h5 {
     color: #0b6dc8;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 1.5rem;
@@ -41,7 +13,7 @@ div#NotFound > div.led > div.panel > div.body > h5 {
     text-align: left;
 }
 
-div#NotFound > div.led > div.panel > div.body > p {
+div#NotFound div.body > p {
     color: #fff;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 3rem;
@@ -51,7 +23,7 @@ div#NotFound > div.led > div.panel > div.body > p {
     text-overflow: ellipsis;
 }
 
-div#NotFound > div.led > div.panel > div.body > p span {
+div#NotFound div.body > p span {
     color: #0b6dc8;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 3rem;
@@ -61,7 +33,7 @@ div#NotFound > div.led > div.panel > div.body > p span {
     text-transform: lowercase;
 }
 
-div#NotFound > div.led > div.panel > div.footer {
+div#NotFound div.footer {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -70,7 +42,7 @@ div#NotFound > div.led > div.panel > div.footer {
     height: 5rem;
 }
 
-div#NotFound > div.led > div.panel > div.footer > a {
+div#NotFound div.footer > a {
     color: #fff;
     font-family: 'Source Sans Pro', sans-serif;
     width: 100%;
@@ -84,24 +56,23 @@ div#NotFound > div.led > div.panel > div.footer > a {
     transition: all .2s;
 }
 
-div#NotFound > div.led > div.panel > div.footer > a:hover {
+div#NotFound div.footer > a:hover {
     box-shadow: 0px 0px 30px 1px #1a1a1a;
     transform: scale(0.98);
     border-radius: 20px;
 }
 
 @media (min-width: 0px) and (max-width: 420px) {
-    div#NotFound > div.led {
-        width: 100%;
-        height: 85%;
+    div #NotFound div.body > h5 {
+        font-size: 1.2rem;
     }
 
-    div#NotFound > div.led > div.panel {
-        width: 100%;
-        height: 100%;
+    div#NotFound div.body > p,
+    div#NotFound div.body > p span {
+        font-size: calc(2.5rem + 1.5vw);
     }
 
-    div#NotFound > div.led > div.panel > div.footer > a {
+    div#NotFound div.footer > a {
         font-size: 1.5rem;
         margin-bottom: 1rem;
     }

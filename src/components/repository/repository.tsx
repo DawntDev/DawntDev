@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { IRepo } from "../../context/interfaces";
+import { IRepo } from "../../interfaces";
 import "./repo.css"
 
 export default function Repo(props: IRepo) { 

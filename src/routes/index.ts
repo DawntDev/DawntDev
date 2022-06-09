@@ -1,4 +1,4 @@
-import { IRoot } from "../context/interfaces";
+import { IRoot } from "../interfaces";
 import Home from "./home/home";
 import Projects from "./projects/projects";
 import Blog from "./blog/blog";

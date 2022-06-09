@@ -1,5 +1,6 @@
 import React from "react";
 import { useLocation, NavLink } from "react-router-dom";
+import { LedCard } from "../../components/cards/cards";
 import "./not-found.css";
 
 export default function NotFound() {
@@ -7,17 +8,15 @@ export default function NotFound() {
 
     return (
         <div id="NotFound" className="route">
-            <div className="led">
-                <div className="panel">
-                    <div className="body">
-                        <h5>404 Error</h5>
-                        <p>The page you are looking for, <span>{location}</span>, does not exist.</p>
-                    </div>
-                    <div className="footer">
-                        <NavLink to="/">Go to Home</NavLink>
-                    </div>
+            <LedCard>
+                <div className="body">
+                    <h5>404 Error</h5>
+                    <p>The page you are looking for, <span>{location}</span>, does not exist.</p>
                 </div>
-            </div>
-        </div>
+                <div className="footer">
+                    <NavLink to="/">Go to Home</NavLink>
+                </div>
+            </LedCard>
+        </div >
     );
 };

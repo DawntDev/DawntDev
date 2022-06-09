@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Particles from "react-tsparticles";
-import { particlesConnected } from "../../context/particles";
+import { particlesConnected } from "../../components/particles";
 import "./about.css";
 
 export default function About() {
