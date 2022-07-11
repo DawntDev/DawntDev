@@ -103,7 +103,7 @@
 <!-- Repositories -->
 <p align="center">
     <a href="https://github.com/DawntDev/BetterChat">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=DawntDev&repo=BetterChat&theme=github_dark" />
+        <img src="https://github-readme-stats.vercel.app/api/pin/?username=DawntDev&repo=HTML-Render&theme=github_dark" />
     </a>
     <span>&nbsp;</span>
     <a href="https://github.com/DawntDev/Climate">
