@@ -57,10 +57,10 @@
 <!-- Details Section -->
 <!-- Activity Widget -->
 <div align="center">
-    <img alt="Dawnt GitHub Stats" width="450px"
+    <img alt="Dawnt GitHub Stats" width="420px"
         src="https://github-readme-stats.vercel.app/api?username=DawntDev&show_icons=true&theme=github_dark" />
-    <img alt="Dawnt GitHub Stats" width="450px"
-        src="https://github-readme-stats.vercel.app/api/wakatime?username=Dawnt&layout=compact&theme=github_dark" />
+    <img alt="Dawnt GitHub Stats" width="420px"
+        src="https://github-readme-stats.vercel.app/api/wakatime?username=dawnt&layout=compact&theme=github_dark" />
 </div>
 <br>
 
