@@ -21,7 +21,7 @@
     <!-- Programming Languages -->
     <!-- Code -->
     <a href="https://github.com/DawntDev?tab=repositories" target="_blank"><img alt="Code"
-                    src="https://img.shields.io/badge/-code-000000?style=flat-square&logo=Plex&logoColor=white">
+                    src="https://img.shields.io/badge/-> code-000000?style=flat-square">
     </a>
     <!-- HTML -->
     <a href="https://github.com/DawntDev?tab=repositories" target="_blank"><img alt="HTML"
