@@ -1,23 +1,25 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import NavBar from './components/nav-bar/nav-bar';
-import Root from './routes';
+import { useState, useEffect } from "react";
+import { IoIosArrowBack } from "react-icons/io";
+import { Display, Input } from "./components";
+import File from "./files";
 
-function App() {
+
+const pathReturn = (path: string): string => path.split("/").slice(0, -1).join("/");
+
+export default function App() {
+    const [path, setPath] = useState<string>("home/about-me.md");
+
     return (
-        <Router>
-            <NavBar />
-            <Routes>
-                {Root.map((rule, i) => (
-                    <Route
-                        key={i}
-                        path={rule.path}
-                        element={<rule.element />}>
-                    </Route>
-                ))}
-            </Routes>
-        </Router>
+        <div className="App">
+            <Display>
+                <Input value={path} />
+                <File path={path} callback={setPath} />
+                {
+                    path.split("/").length > 1
+                        ? <IoIosArrowBack className="return" onClick={() => setPath(pathReturn(path))} />
+                        : <></>
+                }
+            </Display>
+        </div>
     );
-};
-
-export default App;
+}

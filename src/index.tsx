@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import { ApolloProvider, ApolloClient, InMemoryCache, HttpLink } from '@apollo/client'
 import './index.css';
 import App from './App';
@@ -12,15 +12,19 @@ const httpLink: object = {
     }
 };
 
+const root = ReactDOM.createRoot(
+    document.getElementById('root') as HTMLElement
+);
+
 const client: ApolloClient<any> = new ApolloClient({
     link: new HttpLink(httpLink),
     cache: new InMemoryCache(),
 });
 
-
-ReactDOM.render(
-    <ApolloProvider client={client}>
-        <App />
-    </ApolloProvider>,
-    document.getElementById('root')
+root.render(
+    <React.StrictMode>
+        <ApolloProvider client={client}>
+            <App />
+        </ApolloProvider>
+    </React.StrictMode>
 );

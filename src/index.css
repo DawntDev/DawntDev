@@ -1,4 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+@font-face {
+    font-family: "FiraCode";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("../public/fonts/FiraCode-Regular.ttf");
+}
 
 * {
     margin: 0;
@@ -7,52 +13,36 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
-}
-
-*::-webkit-scrollbar {
-    width: .5rem;
-    height: 100%;
-    border-radius: 5px;
-}
-
-*::-webkit-scrollbar-track {
-    background-color: transparent;
-}
-
-*::-webkit-scrollbar-thumb {
-    background-color: #fff;
-    border-radius: 5px;
+    font-family: "FiraCode", monospace;
+    cursor: crosshair;
 }
 
 html, body, #root {
-    width: 100%;
-    height: 100%;
-    background: #16171b;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle, #1b1919 0%, #16171b 100%);
 }
 
-div.route {
-    position: absolute;
-    overflow-x: hidden;
+div.App {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    right: 0;
-    width: calc(100% - 16.25rem);
+    justify-content: center;
     height: 100%;
-    padding: .75rem;
-    transition: all 0.3s ease-in-out;
+    width: 100%;
 }
 
-
-@media (min-width: 850px) and (max-width: 1199px) {
-    div.route {
-        width: calc(100% - 13.125rem);
-    }
+div.App svg.return {
+    width: 1.25em;
+    height: 1.25em;
+    fill: #fff;
+    margin: 0.5rem 0rem 0.5rem 0.6rem;
 }
 
-@media (min-width: 0px) and (max-width: 849px) {
-    div.route {
-        width: 100%;
-        padding-top: 3.5rem;
-    }
+div.App svg.return:hover {
+    fill: #4361ee;
+}
+
+div.file {
+    color: #fff;
+    margin: 0.5rem 3rem;
 }

@@ -1,0 +1,8 @@
+div#tech-stack div.content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-flow: wrap-reverse;
+    /* justify-content: center; */
+
+}
