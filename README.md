@@ -21,7 +21,7 @@
     <!-- Programming Languages -->
     <!-- Code -->
     <a href="https://github.com/DawntDev?tab=repositories" target="_blank"><img alt="Code"
-                    src="https://img.shields.io/badge/-code-000000?style=flat-square&logo=Plex&logoColor=white">
+                    src="https://img.shields.io/badge/-> code-000000?style=flat-square">
     </a>
     <!-- HTML -->
     <a href="https://github.com/DawntDev?tab=repositories" target="_blank"><img alt="HTML"
@@ -57,10 +57,10 @@
 <!-- Details Section -->
 <!-- Activity Widget -->
 <div align="center">
-    <img alt="Dawnt GitHub Stats" height="160px"
+    <img alt="Dawnt GitHub Stats" width="400px"
         src="https://github-readme-stats.vercel.app/api?username=DawntDev&show_icons=true&theme=github_dark" />
-    <img alt="Dawnt GitHub Stats" height="160px"
-        src="https://github-readme-stats.vercel.app/api/wakatime?username=Dawnt&layout=compact&theme=github_dark" />
+    <img alt="Dawnt GitHub Stats" width="400px"
+        src="https://github-readme-stats.vercel.app/api/wakatime?username=Dawnt&show_icons=true&layout=compact&theme=github_dark" />
 </div>
 <br>
 
@@ -102,8 +102,8 @@
 </samp>
 <!-- Repositories -->
 <p align="center">
-    <a href="https://github.com/DawntDev/Amai">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=DawntDev&repo=Amai&theme=github_dark" />
+    <a href="https://github.com/DawntDev/BetterChat">
+        <img src="https://github-readme-stats.vercel.app/api/pin/?username=DawntDev&repo=HTML-Render&theme=github_dark" />
     </a>
     <span>&nbsp;</span>
     <a href="https://github.com/DawntDev/Climate">
