@@ -28,7 +28,12 @@ export default function TechStack(): JSX.Element {
                 >
                     Languages
                 </motion.h3>
-                <div className="stack">
+                <motion.div className="stack"
+                    initial={{ opacity: 0, x: -100 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{once: true}}
+                    transition={{ duration: 0.5 }}
+                >
                     <TechIcon name="HTML" color="#e34c26" icon={SiHtml5} />
                     <TechIcon name="CSS" color="#264de4" icon={SiCss3} />
                     <TechIcon name="JS" color="#f2cb00" icon={SiJavascript} />
@@ -38,20 +43,25 @@ export default function TechStack(): JSX.Element {
                     <TechIcon name="C#" color="#239120" icon={SiCsharp} />
                     <TechIcon name="GraphQL" color="#e10098" icon={SiGraphql} />
                     <TechIcon name="R" color="#276dc3" icon={SiR} />
-                </div>
+                </motion.div>
                 <motion.h3
                     initial={{ opacity: 0, x: -100 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.65 }}
+                    transition={{ duration: 0.7 }}
                 >
                     Frameworks & Libraries
                 </motion.h3>
-                <div className="stack">
+                <motion.div className="stack"
+                    initial={{ opacity: 0, x: -100 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true}}
+                    transition={{ duration: 0.7 }}
+                >
                     <TechIcon name="React" color="#61dafb" icon={SiReact} />
                     <TechIcon name="Flask" color="#000000" icon={SiFlask} />
                     <TechIcon name="JetPack" color="#1a237e" icon={() => <img src={JetPack} alt="JetPack" width="42px" />} />
                     <TechIcon name="NumPy" color="#4c76cf" icon={() => <img src={NumPy} alt="NumPy" width="42px" />} />
-                </div>
+                </motion.div>
                 <motion.h3
                     initial={{ opacity: 0, x: -100 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -59,7 +69,12 @@ export default function TechStack(): JSX.Element {
                 >
                     Tools
                 </motion.h3>
-                <div className="stack">
+                <motion.div className="stack"
+                    initial={{ opacity: 0, x: -100 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true}}
+                    transition={{ duration: 0.8 }}
+                >
                     <TechIcon name="Git" color="#f05032" icon={SiGit} />
                     <TechIcon name="Visual Studio" color="#5c2d91" icon={SiVisualstudio} />
                     <TechIcon name="VS Code" color="#007acc" icon={SiVisualstudiocode} />
@@ -68,7 +83,7 @@ export default function TechStack(): JSX.Element {
                     <TechIcon name="Postman" color="#ff6c37" icon={SiPostman} />
                     <TechIcon name="npm" color="#cb3837" icon={SiNpm} />
                     <TechIcon name="pip" color="#1a75ff" icon={SiPypi} />
-                </div>
+                </motion.div>
             </div>
         </div>
     );

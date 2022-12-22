@@ -16,9 +16,28 @@ const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
 );
 
+const cache: InMemoryCache = new InMemoryCache({
+    typePolicies: {
+        Query: {
+            fields: {
+                user: {
+                    merge(existing, incoming) {
+                        return { ...existing, ...incoming };
+                    },
+                },
+                repository: {
+                    merge(existing, incoming) {
+                        return { ...existing, ...incoming };
+                    }
+                }
+            }
+        }
+    }
+});
+
 const client: ApolloClient<any> = new ApolloClient({
     link: new HttpLink(httpLink),
-    cache: new InMemoryCache(),
+    cache: cache,
 });
 
 root.render(

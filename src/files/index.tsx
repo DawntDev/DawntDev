@@ -21,7 +21,7 @@ export default function File({ path, callback }: { path: string, callback: Dispa
                 return <div>File not found</div>
         };
     } else if (pathArray.length > 2) {
-        return <Repository />
+        return <Repository name={pathArray.at(-1) as string} />
     } else {
         if (pathArray.length > 1) {
             return <ListDirectory dir={path} callback={callback} key={1}/>

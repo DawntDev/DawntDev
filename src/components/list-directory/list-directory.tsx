@@ -7,7 +7,7 @@ import "./list-directory.css";
 const githubQuery = gql`
     query {
         user(login: "DawntDev") {
-            repositories(first: 100) {
+            repositories(first: 100, affiliations:[OWNER]) {
                 nodes { name }
             }
         }
