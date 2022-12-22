@@ -27,6 +27,6 @@ export default function File({ path, callback }: { path: string, callback: Dispa
             return <ListDirectory dir={path} callback={callback} key={1}/>
         } else {
             return <ListDirectory dir={path} callback={callback} key={0}/>
-        }
+        };
     };
 };

@@ -1,6 +1,6 @@
 import { SiCodewars, SiSpotify, SiDiscord, SiLinkedin } from "react-icons/si";
 import { motion } from "framer-motion";
-import "./about-me.css"
+import "./about-me.css";
 
 export default function AboutMe(): JSX.Element {
     return (
@@ -8,7 +8,7 @@ export default function AboutMe(): JSX.Element {
             <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 }}
+                transition={{ delay: 0.1, duration: 0.3 }}
             >
                 About Me
             </motion.h1>
@@ -18,7 +18,8 @@ export default function AboutMe(): JSX.Element {
                         src="https://avatars.githubusercontent.com/u/65832744?v=4" alt="Profile"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.2 }}
+                        transition={{ delay: 0.2, duration: 0.3 }}
+                        width="160px" height="160px"
                     />
                     <div className="social">
                         <motion.a
@@ -27,7 +28,7 @@ export default function AboutMe(): JSX.Element {
                             rel="noopener noreferrer"
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.3 }}
+                            transition={{ delay: 0.3, duration: 0.3 }}
                         >
                             <SiCodewars />
                         </motion.a>
@@ -37,7 +38,7 @@ export default function AboutMe(): JSX.Element {
                             rel="noopener noreferrer"
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.4 }}
+                            transition={{ delay: 0.4, duration: 0.3 }}
                         >
                             <SiSpotify />
                         </motion.a>
@@ -47,7 +48,7 @@ export default function AboutMe(): JSX.Element {
                             rel="noopener noreferrer"
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.5 }}
+                            transition={{ delay: 0.5, duration: 0.3 }}
                         >
                             <SiDiscord />
                         </motion.a>
@@ -57,7 +58,7 @@ export default function AboutMe(): JSX.Element {
                             rel="noopener noreferrer"
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.6 }}
+                            transition={{ delay: 0.6, duration: 0.3 }}
                         >
                             <SiLinkedin />
                         </motion.a>
@@ -67,7 +68,7 @@ export default function AboutMe(): JSX.Element {
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.2 }}
+                        transition={{ delay: 0.2, duration: 0.3 }}
                     >
                         Hello my name is Juan Manuel, I am a Mexican Software Developer, I am currently studying at UNAM. I am a very passionate person who always seeks to do things in the best way, I also try to help as long as it is within my possibilities. I love to solve problems and puzzles, especially if they involve programming.
                         I am currently part of a community of developers whose mission is to promote programming in young people, helping them to solve doubts and problems they have related to this great world of computers.

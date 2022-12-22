@@ -14,7 +14,7 @@ div#about-me div.content {
 div#about-me div.right p {
     font-size: 1.25rem;
     font-weight: 500;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
     text-align: justify;
 }
 
@@ -33,7 +33,7 @@ div#about-me div.left div.social {
 div#about-me div.left div.social a {
     width: 1.5rem;
     height: 1.5rem;
-    margin: 0 .5rem;
+    margin: 0 0.5rem;
 }
 
 div#about-me div.left div.social a svg {
@@ -64,10 +64,6 @@ div#about-me div.left div.social a[aria-label="LinkedIn (en inglés)"] svg:hover
 
 
 @media screen and (max-width: 768px) {
-
-    div#about-me {
-        margin: 0.5rem 1rem;
-    }
 
     div#about-me div.content {
         flex-direction: column;

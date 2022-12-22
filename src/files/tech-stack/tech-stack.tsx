@@ -1,40 +1,74 @@
+import {
+    SiJavascript, SiTypescript, SiPython, SiKotlin, SiCsharp, SiR, SiHtml5, SiCss3,
+    SiReact, SiFlask, SiGraphql,
+    SiGit, SiVisualstudiocode, SiAndroidstudio, SiVim, SiPostman, SiNpm, SiPypi, SiVisualstudio
+} from "react-icons/si";
+import JetPack from "../../assets/icons/jetpack-compose.png";
+import NumPy from "../../assets/icons/numpy.png";
+import { TechIcon } from "../../components";
+import { motion } from "framer-motion";
 import "./tech-stack.css";
 
 export default function TechStack(): JSX.Element {
+    console.log(process.env.PUBLIC_URL)
     return (
         <div id="tech-stack" className="file">
-            <h1>Tech Stack</h1>
+            <motion.h1
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.4 }}
+            >
+                Tech-Stack
+            </motion.h1>
             <div className="content">
-                <h3>Languages</h3>
-                <ul>
-                    <li>JavaScript</li>
-                    <li>TypeScript</li>
-                    <li>Python</li>
-                    <li>Kotlin</li>
-                    <li>C#</li>
-                    <li>R</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                </ul>
-                <h3>Frameworks</h3>
-                <ul>
-                    <li>React</li>
-                    <li>Express</li>
-                    <li>Flask</li>
-                    <li>GraphQL</li>
-                    <li>JetPack</li>
-                </ul>
-                <h3>Tools</h3>
-                <ul>
-                    <li>Git</li>
-                    <li>Visual Studio</li>
-                    <li>Android Studio</li>
-                    <li>VS Code</li>
-                    <li>Vim</li>
-                    <li>Postman</li>
-                    <li>npm</li>
-                    <li>pip</li>
-                </ul>
+                <motion.h3
+                    initial={{ opacity: 0, x: -100 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5 }}
+                >
+                    Languages
+                </motion.h3>
+                <div className="stack">
+                    <TechIcon name="HTML" color="#e34c26" icon={SiHtml5} />
+                    <TechIcon name="CSS" color="#264de4" icon={SiCss3} />
+                    <TechIcon name="JS" color="#f2cb00" icon={SiJavascript} />
+                    <TechIcon name="TS" color="#0074c2" icon={SiTypescript} />
+                    <TechIcon name="Python" color="#3776ab" icon={SiPython} />
+                    <TechIcon name="Kotlin" color="#B125EA" icon={SiKotlin} />
+                    <TechIcon name="C#" color="#239120" icon={SiCsharp} />
+                    <TechIcon name="GraphQL" color="#e10098" icon={SiGraphql} />
+                    <TechIcon name="R" color="#276dc3" icon={SiR} />
+                </div>
+                <motion.h3
+                    initial={{ opacity: 0, x: -100 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.65 }}
+                >
+                    Frameworks & Libraries
+                </motion.h3>
+                <div className="stack">
+                    <TechIcon name="React" color="#61dafb" icon={SiReact} />
+                    <TechIcon name="Flask" color="#000000" icon={SiFlask} />
+                    <TechIcon name="JetPack" color="#1a237e" icon={() => <img src={JetPack} alt="JetPack" width="42px" />} />
+                    <TechIcon name="NumPy" color="#4c76cf" icon={() => <img src={NumPy} alt="NumPy" width="42px" />} />
+                </div>
+                <motion.h3
+                    initial={{ opacity: 0, x: -100 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8 }}
+                >
+                    Tools
+                </motion.h3>
+                <div className="stack">
+                    <TechIcon name="Git" color="#f05032" icon={SiGit} />
+                    <TechIcon name="Visual Studio" color="#5c2d91" icon={SiVisualstudio} />
+                    <TechIcon name="VS Code" color="#007acc" icon={SiVisualstudiocode} />
+                    <TechIcon name="Android Studio" color="#3ddc84" icon={SiAndroidstudio} />
+                    <TechIcon name="Vim" color="#019733" icon={SiVim} />
+                    <TechIcon name="Postman" color="#ff6c37" icon={SiPostman} />
+                    <TechIcon name="npm" color="#cb3837" icon={SiNpm} />
+                    <TechIcon name="pip" color="#1a75ff" icon={SiPypi} />
+                </div>
             </div>
         </div>
     );

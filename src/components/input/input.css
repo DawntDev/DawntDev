@@ -2,7 +2,7 @@ div#input {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin: .5rem 1rem;
+    margin: 0.5rem 1rem;
 }
 
 div#input svg {
@@ -14,7 +14,7 @@ div#input svg {
 
 div#input p {
     border: none;
-    margin: 1rem .5rem;
+    margin: 1rem 0.5rem;
     background: transparent;
     color: #fff;
     font-size: 1.25em;
@@ -26,6 +26,6 @@ div#input p {
 
 @media (max-width: 768px) {
     div#input p {
-        font-size: calc(.75em + .75vw);
+        font-size: calc(0.75em + 0.75vw);
     }
 }
