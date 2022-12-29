@@ -3,6 +3,7 @@ import { ListDirectory, Repository } from "../components";
 import AboutMe from "./about-me/about-me";
 import TechStack from "./tech-stack/tech-stack";
 import ContactMe from "./contact-me/contact-me";
+import CurriculumVitae from "./curriculum-vitae/curriculum-vitae";
 
 export default function File({ path, callback }: { path: string, callback: Dispatch<SetStateAction<string>> }): JSX.Element {
     let pathArray: string[] = path.split("/");
@@ -16,7 +17,7 @@ export default function File({ path, callback }: { path: string, callback: Dispa
             case "contact-me.md":
                 return <ContactMe />
             case "curriculum-vitae.pdf":
-                return <div>Curriculum Vitae</div>
+                return <CurriculumVitae /> 
             default:
                 return <div>File not found</div>
         };

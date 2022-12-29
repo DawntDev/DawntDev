@@ -1,10 +1,32 @@
+import { useState } from "react";
 import { SiCodewars, SiDiscord, SiGithub, SiCodepen } from "react-icons/si";
 import { IoLocationSharp, IoAt, IoPaperPlane } from "react-icons/io5";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { motion } from "framer-motion";
-import "./contact-me.css"
+import "./contact-me.css";
 
 export default function ContactMe(): JSX.Element {
+    const API: string | undefined = process.env.REACT_APP_API_URL;
+    const [state, setState] = useState<number>(0);
+    const ContactForm = (e: React.FormEvent<HTMLFormElement>): void => {
+        if (API) {
+            let form = Object.fromEntries(new FormData(e.currentTarget));
+            fetch(`${API}/api/works`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(form)
+            }).then(res => {
+                setState(res.status);
+                setTimeout(() => setState(0), 4000);
+            });
+        };
+
+        e.preventDefault();
+    };
+
+
     return (
         <div id="contact-me" className="file">
             <motion.h1
@@ -16,7 +38,7 @@ export default function ContactMe(): JSX.Element {
             </motion.h1>
             <div className="container">
                 <div className="left">
-                    <form action="" method="post">
+                    <form onSubmit={ContactForm}>
                         <motion.input
                             initial={{ opacity: 0, y: -20 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -47,10 +69,26 @@ export default function ContactMe(): JSX.Element {
                             initial={{ opacity: 0, y: -20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.6, duration: 0.35 }}
+                            style={{ backgroundColor: state === 200 ? "#42bf6e" : state !== 0 ? "#ee3f5e" : undefined }}
                             type="submit"
+                            className={state === 0 ? "active-hover" : undefined}
                         >
-                            <IoPaperPlane />
-                            <span>Send</span>
+                            {
+                                state === 200 ? (
+                                    <>
+                                        Success
+                                    </>
+                                ) : state === 0 ? (
+                                    <>
+                                        <IoPaperPlane />
+                                        <span>Send</span>
+                                    </>
+                                ) : (
+                                    <>
+                                        Error
+                                    </>
+                                )
+                            }
                         </motion.button>
                     </form>
                 </div>

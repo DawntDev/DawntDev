@@ -10,7 +10,6 @@ import { motion } from "framer-motion";
 import "./tech-stack.css";
 
 export default function TechStack(): JSX.Element {
-    console.log(process.env.PUBLIC_URL)
     return (
         <div id="tech-stack" className="file">
             <motion.h1
@@ -31,7 +30,7 @@ export default function TechStack(): JSX.Element {
                 <motion.div className="stack"
                     initial={{ opacity: 0, x: -100 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{once: true}}
+                    viewport={{ once: true }}
                     transition={{ duration: 0.5 }}
                 >
                     <TechIcon name="HTML" color="#e34c26" icon={SiHtml5} />
@@ -54,7 +53,7 @@ export default function TechStack(): JSX.Element {
                 <motion.div className="stack"
                     initial={{ opacity: 0, x: -100 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true}}
+                    viewport={{ once: true }}
                     transition={{ duration: 0.7 }}
                 >
                     <TechIcon name="React" color="#61dafb" icon={SiReact} />
@@ -72,7 +71,7 @@ export default function TechStack(): JSX.Element {
                 <motion.div className="stack"
                     initial={{ opacity: 0, x: -100 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true}}
+                    viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
                 >
                     <TechIcon name="Git" color="#f05032" icon={SiGit} />
