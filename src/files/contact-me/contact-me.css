@@ -1,0 +1,132 @@
+div#contact-me h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+div#contact-me div.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1.5rem auto 0;
+    width: 75%;
+}
+
+div#contact-me div.container div {
+    width: 100%;
+    margin: 0 1rem;
+}
+
+/* Left */
+div#contact-me div.container div.left input,
+div#contact-me div.container div.left textarea {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    margin-bottom: 0.75rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    resize: vertical;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: transparent;
+    color: #fff;
+}
+
+div#contact-me div.container div.left button {
+    width: 100%;
+    height: 2.5rem;
+    background-color: #4361ee;
+    color: #fff;
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+}
+
+div#contact-me div.container div.left button span {
+    font-size: 0;
+
+    transition: all 0.2s ease-in-out;
+}
+
+div#contact-me div.container div.left button svg {
+    font-size: 1rem;
+
+    transition: all 0.2s ease-in-out;
+}
+
+div#contact-me div.container div.left button:hover {
+    background-color: #3b50ce;
+}
+
+div#contact-me div.container div.left button:hover svg {
+    font-size: 0;
+}
+
+div#contact-me div.container div.left button:hover span {
+    font-size: 1rem;
+}
+
+/* Right */
+div#contact-me div.container div.right ul.contact-list li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 3.6rem;
+}
+
+div#contact-me div.container div.right ul.contact-list li svg {
+    font-size: 1.75rem;
+    margin-right: 3.875rem;
+}
+
+div#contact-me div.container div.right ul.contact-list li span,
+div#contact-me div.container div.right ul.contact-list li a {
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: #ccc;
+}
+
+div#contact-me div.container div.right hr {
+    background-color: #ffffff99;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+div#contact-me div.container div.right ul.social-media-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.375rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+div#contact-me div.container div.right ul.social-media-list li a {
+    height: 60px;
+    width: 60px;
+    margin: 10px 3px;
+    line-height: 60px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #383838;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+
+div#contact-me div.container div.right div.copyright {
+    text-align: center;
+    margin: 0;
+    font-size: 0.875rem;
+    color: #ccc;
+}

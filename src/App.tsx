@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { IoIosArrowBack } from "react-icons/io";
 import { Display, Input } from "./components";
 import File from "./files";
@@ -22,4 +22,4 @@ export default function App() {
             </Display>
         </div>
     );
-}
+};
