@@ -16,7 +16,7 @@ const githubQuery = gql`
 
 export default function ListDirectory({ dir, callback }: { dir: string, callback: Dispatch<SetStateAction<string>> }): JSX.Element {
     const DIR: { [key: string]: string[] } = {
-        "home": ["about-me.md", "tech-stack.md", "projects", "contact-me.md", "curriculum-vitae.pdf"],
+        "home": ["about-me.md", "tech-stack.md", "projects", "contact-me.md"],
         "home/projects": useQuery(githubQuery).data?.user.repositories.nodes.map((repo: any) => repo.name),
     };
 

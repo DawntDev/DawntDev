@@ -110,7 +110,7 @@ export default function ContactMe(): JSX.Element {
                         <li>
                             <IoAt />
                             <span>
-                                <a href="mailto:jmanuelhv9@gmail.com" title="Send me an email">jmanuelhv9@gmail.com</a>
+                                <a href="mailto:dawntdev@gmail.com" title="Send me an email">dawntdev@gmail.com</a>
                             </span>
                         </li>
                     </motion.ul>
