@@ -11,6 +11,7 @@ export default function ContactMe(): JSX.Element {
     const ContactForm = (e: React.FormEvent<HTMLFormElement>): void => {
         if (API) {
             let form = Object.fromEntries(new FormData(e.currentTarget));
+            e.currentTarget.reset();
             fetch(`${API}/api/works`, {
                 method: "POST",
                 headers: {
