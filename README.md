@@ -60,7 +60,7 @@
     <img alt="Dawnt GitHub Stats" width="400px"
         src="https://github-readme-stats.vercel.app/api?username=DawntDev&show_icons=true&theme=github_dark" />
     <img alt="Dawnt GitHub Stats" width="400px"
-        src="https://github-readme-stats.vercel.app/api/wakatime?username=Dawnt&show_icons=true&layout=compact&theme=github_dark" />
+        src="https://github-readme-stats.vercel.app/api/wakatime?username=Dawnt&show_icons=true&layout=compact&theme=github_dark&range=last_7_days" />
 </div>
 <br>
 
