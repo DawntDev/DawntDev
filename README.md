@@ -84,7 +84,7 @@
                 src="https://img.shields.io/badge/-CodeWars-B1361E?style=flat-square&logo=CodeWars&logoColor=white">
         </a>
         <!-- Gmail -->
-        <a href="mailto:jmanuelhv9@gmail.com" target="_blank"><img alt="Gmail"
+        <a href="mailto:dawntdev@gmail.com" target="_blank"><img alt="Gmail"
                 src="https://img.shields.io/badge/-Gmail-EA4335?style=flat-square&logo=Gmail&logoColor=white">
         </a>
     </p>
