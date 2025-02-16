@@ -1,92 +1,77 @@
-import { useCallback, useEffect, useMemo, useState, type ReactNode } from "react";
-import { useLocation } from "react-router";
-import type { ext } from "~/schemas/types";
+import { useEffect, useState } from "react";
 
-
-const letters = String.fromCharCode(...Array.from({ length: 123 - 32 }, (_, i) => i + 32));
-const TypingEffect = ({ cmd, path }: { cmd: string, path: string }) => {
-    const sleep = useMemo(
-        () => Number.parseFloat(`0.${"0".repeat(cmd.length + path.length - 3)}1`),
-        [cmd, path]
-    );
-
-    const [displayedCmd, setDisplayedCmd] = useState<string[]>(Array(cmd.length));
-    const [displayedPath, setDisplayedPath] = useState<string[]>(Array(path.length));
-    const [indexCmd, setIndexCmd] = useState<number>(0);
-    const [indexPath, setIndexPath] = useState<number>(0);
-
+export default function Cmd({ command }: { command: string }) {
+    const [displayedText, setDisplayedText] = useState<string>("");
+    const [writing, setWriting] = useState<boolean>(false);
+    const [deleting, setDeleting] = useState<boolean>(false);
 
     useEffect(() => {
-        if (indexCmd < cmd.length) {
-            const timeout = setTimeout(() => {
-                for (const letter of letters) {
-                    setDisplayedCmd((prev) => {
-                        const newCmd = [...prev];
-                        newCmd[indexCmd] = letter;
-                        return newCmd;
-                    });
+        if (displayedText !== command && !writing && !deleting) {
+            const timeouts: NodeJS.Timeout[] = [];
+            const clearAllTimeouts = () => timeouts.forEach(clearTimeout);
 
-                    if (letter === cmd[indexCmd])
-                        break;
-                };
-                setIndexCmd((prev) => prev + 1);
-            }, sleep * 1000);
-
-            return () => clearTimeout(timeout);
-        } else if (indexPath < path.length) {
-            const timeout = setTimeout(() => {
-                for (const letter of letters) {
-                    setDisplayedPath((prev) => {
-                        const newPath = [...prev];
-                        newPath[indexPath] = letter;
-                        return newPath;
-                    });
-
-                    if (letter === path[indexPath])
-                        break;
-                };
-                setIndexPath((prev) => prev + 1);
-            }, sleep * 1000);
-
-            return () => clearTimeout(timeout);
-        }
-    }, [indexCmd, indexPath, cmd, path]);
-
-    return <><span className="font-semibold">{displayedCmd.join("")}</span> {displayedPath.join("")}</>;
-};
-
-
-
-
-
-export default function Cmd({ extension }: { extension: ext | undefined }) {
-    const { pathname } = useLocation();
-    const cmdParser = useCallback((path: string, ext: string | undefined): ReactNode => {
-        if (path === "/")
-            return <TypingEffect cmd="touch" path="./about-me.md" />;
-
-        if (ext) {
-            const commands: Record<string, string> = {
-                ".md": "touch",
-                ".py": "python",
-                ".js": "node",
+            const typeText = (text: string, delay: number) => {
+                for (let i = 0; i <= text.length; i++) {
+                    timeouts.push(setTimeout(() => {
+                        setDisplayedText(prev => prev + (text[i] || ""));
+                        if (i === text.length) {
+                            setWriting(false);
+                            clearAllTimeouts();
+                        }
+                    }, delay * i));
+                }
             };
 
-            const command = commands[ext];
-            if (command)
-                return <TypingEffect cmd={command} path={`.${path}${ext}`} />;
+            const deleteText = (length: number, delay: number) => {
+                for (let i = 0; i <= length; i++) {
+                    timeouts.push(setTimeout(() => {
+                        setDisplayedText(prev => prev.slice(0, -1));
+                        if (i === length) {
+                            setDeleting(false);
+                            clearAllTimeouts();
+                        }
+                    }, delay * i));
+                }
+            };
 
+            const inCommon = getCommonPrefixLength(displayedText, command);
+
+            if (!displayedText) {
+                // Typing All
+                // console.log("Typing All", command, displayedText);
+                setWriting(true);
+                typeText(command, 20);
+            } else if (displayedText[0] !== command[0]) {
+                // Erased All
+                // console.log("Erased All", command, displayedText);
+                setDeleting(true);
+                deleteText(displayedText.length, 20);
+            } else if (displayedText !== command.slice(0, inCommon)) {
+                //Erased Common
+                // console.log("Erased Common", inCommon, command, displayedText);
+                setDeleting(true);
+                deleteText(displayedText.length - inCommon, 20);
+            } else if (displayedText !== command) {
+                // Typing Remaining
+                // console.log("Typing Remaining", command.length - displayedText.length, command, command.length, displayedText, displayedText.length);
+                setWriting(true);
+                typeText(command.slice(displayedText.length), 20);
+            }
         }
+    }, [command, displayedText, writing, deleting]);
 
-        // Default case
-        return <TypingEffect cmd="cd" path={`.${path}`} />;
-
-    }, [pathname, extension]);
-
-    const content = cmdParser(pathname, extension);
     return (
         <div className="before:content-['▶'] before:mr-2 mb-4">
-            {content}
+            <span className="font-semibold">{displayedText.split(" ")[0]} </span>{displayedText.split(" ")[1] || ""}
         </div>
     );
+}
+
+
+function getCommonPrefixLength(text1: string, text2: string): number {
+    let length = 0;
+    while (length < text1.length && length < text2.length && text1[length] === text2[length]) {
+        length++;
+    }
+    return length;
 }

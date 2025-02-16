@@ -1,10 +1,9 @@
 import { useOutletContext } from "react-router";
-import type { FileTypeSetter } from "~/schemas/types";
-import type { Route } from "./+types/tech-stack";
+import { type Dispatch, type SetStateAction, useEffect } from "react";
 
 export default function TechStack() {
-    const { setFileType } = useOutletContext<{ setFileType: FileTypeSetter }>()
-    setFileType(undefined);
+    const { setCommand } = useOutletContext<{ setCommand: Dispatch<SetStateAction<string>> }>();
+        useEffect(() => setCommand("cd ./tech-stack.md"));
     
     return <h1>TechStack</h1>;
 }

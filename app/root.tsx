@@ -11,7 +11,6 @@ import type { Route } from "./+types/root";
 import stylesheet from "./app.css?url";
 import { Display, EntryFrame, Cmd } from "./components";
 import { useState } from "react";
-import type { ext } from "./schemas/types";
 
 export const links: Route.LinksFunction = () => [
     { rel: "stylesheet", href: stylesheet },
@@ -36,13 +35,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-    const [filetype, setFileType] = useState<ext>();
+    const [command, setCommand] = useState<string>("");
 
     return <div className="w-screen h-screen p-common">
         <EntryFrame />
         <Display>
-            <Cmd extension={filetype} />
-            <Outlet context={{ setFileType }} />
+            <Cmd command={command} />
+            <Outlet context={{ setCommand }} />
         </Display>
     </div>;
 }

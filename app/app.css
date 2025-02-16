@@ -33,7 +33,24 @@
 :root {
     --padding: max(20px, 4vmin);
 }
+::-webkit-scrollbar {
+    width: 8px;
+}
 
+::-webkit-scrollbar-track-piece {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #cdcdcd;
+    outline: 2px solid transparent;
+    outline-offset: -2px;
+    border: .1px solid transparent;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #909090;
+}
 *, *:before, *:after {
     box-sizing: inherit;
     -webkit-user-select: inherit;
@@ -72,4 +89,20 @@ html, body {
     @media (prefers-color-scheme: dark) {
         color-scheme: dark;
     }
+}
+
+nav a.active {
+    font-weight: bold;
+}
+
+
+nav a:hover::before {
+ content: "> ";
+}
+nav a.active::before {
+  content: "> ";
+}
+
+nav:has(a:hover:not(.active)) a.active::before {
+  content: "";
 }
