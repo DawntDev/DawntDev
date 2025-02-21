@@ -1,4 +1,4 @@
-import { useEffect, type ReactNode } from "react";
+import { useEffect, useRef, type ReactNode } from "react";
 
 const togleTheme = (theme: "light" | "dark") => {
     if (theme === "light") {
@@ -18,6 +18,7 @@ export default function Display({ children }: { children: ReactNode }) {
             document.documentElement.classList.remove('dark');
         };
     }, []);
+
     return <div className="w-full h-full bg-neutral-50 dark:bg-neutral-950 text-neutral-950 dark:text-neutral-50 transition-colors duration-100 ease-out border-[0.05px] border-neutral-950 dark:border-neutral-50 p-common">
         {children}
         <div className="fixed z-10 left-[var(--padding)] bottom-[var(--padding)] origin-bottom-left -rotate-90 whitespace-nowrap flex gap-x-4 font-normal uppercase text-xs">
