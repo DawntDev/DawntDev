@@ -33,8 +33,9 @@
 :root {
     --padding: max(20px, 4vmin);
 }
+
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 3px;
 }
 
 ::-webkit-scrollbar-track-piece {
@@ -51,7 +52,10 @@
 ::-webkit-scrollbar-thumb:hover {
     background-color: #909090;
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
     box-sizing: inherit;
     -webkit-user-select: inherit;
     user-select: inherit;
@@ -79,16 +83,23 @@ a {
     text-decoration: none;
 }
 
-ol, ul {
+ol,
+ul {
     list-style: none;
 }
 
-html, body {
+html,
+body {
     @apply bg-neutral-50 dark:bg-neutral-950 h-screen font-neue-montreal;
 
     @media (prefers-color-scheme: dark) {
         color-scheme: dark;
     }
+}
+
+svg,
+path {
+    @apply dark:fill-neutral-50 fill-neutral-950
 }
 
 nav a.active {
@@ -97,12 +108,35 @@ nav a.active {
 
 
 nav a:hover::before {
- content: "> ";
+    content: "> ";
 }
+
 nav a.active::before {
-  content: "> ";
+    content: "> ";
 }
 
 nav:has(a:hover:not(.active)) a.active::before {
-  content: "";
+    content: "";
+}
+
+
+#linkedin:hover>* {
+    fill: #0E76A8;
+    transition-property: fill;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms
+}
+
+#instagram:hover>* {
+    fill: #C13584;
+    transition-property: fill;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+}
+
+#spotify:hover>* {
+    fill: #1DB954;
+    transition-property: fill;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
 }

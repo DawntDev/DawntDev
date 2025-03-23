@@ -12,9 +12,9 @@ const transformPath = (path: string | undefined): string => {
     }
 }
 
-export default function Navbar() {
+export default function Navbar({ className }: { className: string }) {
     return (
-        <nav className="w-full">
+        <nav className={className}>
             <ul>
                 {routes.map((el, i) => <li key={i}>
                     <NavLink
