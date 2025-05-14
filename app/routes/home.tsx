@@ -24,7 +24,7 @@ export default function Home() {
             <h1 className="font-extralight text-3xl xl:text-6xl -ml-[0.15rem]">Juan Manuel</h1>
             <h3 className="font-normal text-xs">Software Developer</h3>
         </header>
-        <section className="flex flex-col sm:flex-row mt-4 sm:items-center justify-around flex-wrap">
+        <section className="flex flex-col sm:flex-row mt-4 justify-around flex-wrap">
             <div className="w-full sm:w-1/3 mb-4 sm:mb-0">
                 <Navbar className="w-full mb-2" />
             </div>

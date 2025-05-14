@@ -115,11 +115,6 @@ nav a.active::before {
     content: "> ";
 }
 
-nav:has(a:hover:not(.active)) a.active::before {
-    content: "";
-}
-
-
 #linkedin:hover>* {
     fill: #0E76A8;
     transition-property: fill;
